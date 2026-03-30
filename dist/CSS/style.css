@@ -1,0 +1,676 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Playwrite DE Grund", "Segoe UI", Arial, sans-serif;
+    width: 100%;
+}
+
+/* ===========================
+   HEADER & NAVIGATION
+=========================== */
+header {
+    width: 100%;
+    height: 100vh;
+    /* FIX: path gambar dari ../../img/ → img/ agar benar di GitHub Pages */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../../img/22e.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.container {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navigation .box-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px 20px 5px;
+}
+
+.navigation .box-navigation .box:nth-child(1) h1 {
+    font-size: 48px;
+    color: #f1c40f;
+    line-height: 0;
+    transform: rotate(2deg);
+}
+
+.navigation .box-navigation .box:nth-child(2) ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li {
+    list-style-type: none;
+    margin-left: 50px;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li i {
+    display: none;
+    color: black;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li a:hover {
+    color: #f1c40f;
+}
+
+.navigation .box-navigation .box:nth-child(3) {
+    display: none;
+    animation: customAni 2s ease 0s infinite normal none;
+}
+
+/* ===========================
+   HERO
+=========================== */
+header .hero {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+}
+
+header .hero h1 {
+    color: #ffffff6c;
+    font-size: 50px;
+    text-align: center;
+    line-height: 2.5;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+.about {
+    background-color: #2c3e50;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about .box-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .box-about .box:nth-child(1) {
+    padding-right: 30px;
+}
+
+.about .box-about .box:nth-child(1) h1 {
+    color: #f1c40f;
+    font-size: 60px;
+    line-height: 1.5;
+}
+
+.about .box-about .box:nth-child(1) p {
+    color: #bdc3c7;
+    font-size: 35px;
+    line-height: 2.4;
+}
+
+.about .box-about .box:nth-child(2) img {
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+}
+
+/* ===========================
+   FAMOUS
+=========================== */
+.famous {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #3498db;
+}
+
+.famous .box-famous {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.famous .box-famous .box {
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+
+.famous .box-famous .box img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.famous .box-famous .box h1 {
+    color: black;
+}
+
+.famous .box-famous .box p {
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+.gallery {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #2c3e50;
+}
+
+.gallery .box-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .box-gallery img {
+    border-radius: 5px;
+    width: 370px;
+    height: 268px;
+    object-fit: cover;
+    margin: 30px;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+}
+
+.contact .box-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact .box-contact h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+/* FIX: selector dari <from> (salah) → <form> (benar) */
+.contact .box-contact form table tr {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .box-contact form table tr td {
+    font-size: 18px;
+    color: white;
+}
+
+.contact .box-contact form table tr td input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px 140px 15px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact .box-contact form table tr td input:focus {
+    box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.4);
+}
+
+.contact .box-contact form table tr td textarea {
+    margin-top: 10px;
+    padding: 15px 200px 200px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+}
+
+.contact .box-contact form table tr td textarea:focus {
+    box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.4);
+}
+
+/* Tombol submit - baru ditambahkan */
+.btn-submit {
+    margin-top: 10px;
+    padding: 12px 40px;
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #d4ac0d;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #2c3e50;
+    padding: 10px 0 10px 0;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+/* ===========================
+   TOMBOL SCROLL TO TOP
+=========================== */
+.kotak-tombol {
+    position: fixed;
+    bottom: 60px;
+    right: 100px;
+    animation: customAni 2s ease 0s infinite normal none;
+}
+
+.tombol {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border: none;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 5px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: black;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+@keyframes customAni {
+    0% { transform: scale3d(1, 1, 1); }
+    30% { transform: scale3d(1.25, 0.75, 1); }
+    40% { transform: scale3d(0.75, 1.25, 1); }
+    50% { transform: scale3d(1.15, 0.85, 1); }
+    65% { transform: scale3d(0.95, 1.05, 1); }
+    75% { transform: scale3d(1.05, 0.95, 1); }
+    100% { transform: scale3d(1, 1, 1); }
+}
+
+/* ===========================
+   RESPONSIVE — 1500px
+=========================== */
+@media screen and (max-width: 1500px) {
+    .about .box-about .box:nth-child(2) img {
+        width: 470px;
+    }
+    .famous .box-famous .box img {
+        width: 360px;
+        height: 290px;
+    }
+    .gallery {
+        height: 100%;
+        padding: 50px 0 50px 0;
+    }
+    .gallery .box-gallery img {
+        margin: 18px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 1360px
+=========================== */
+@media screen and (max-width: 1360px) {
+    .about .box-about .box:nth-child(1) h1 {
+        font-size: 40px;
+    }
+    .about .box-about .box:nth-child(1) p {
+        font-size: 25px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 1350px
+=========================== */
+@media screen and (max-width: 1350px) {
+    .famous .box-famous .box img {
+        width: 270px;
+        height: 200px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 990px (Tablet)
+=========================== */
+@media screen and (max-width: 990px) {
+    .navigation .box-navigation .box:nth-child(2) {
+        display: flex;
+        position: absolute;
+        top: 38px;
+        right: 38px;
+        background-color: #3498db;
+        width: 200px;
+        border-radius: 10px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .navigation .box-navigation .menu-navigation.menu-active {
+        opacity: 1;
+        top: 80px;
+        pointer-events: auto;
+        z-index: 1;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul {
+        flex-direction: column;
+    }
+
+    .navigation .box-navigation .box:nth-child(1) h1 {
+        font-size: 42px;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul li {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        margin-left: -24px;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul li i {
+        display: block;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul li a {
+        color: white;
+    }
+
+    .navigation .box-navigation .box:nth-child(3) {
+        display: inline-block;
+        font-size: 40px;
+        padding: 0 13px 0 13px;
+    }
+
+    header .hero h1 {
+        font-size: 38px;
+    }
+
+    .about {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .about .box-about {
+        flex-direction: column-reverse;
+    }
+
+    .about .box-about .box:nth-child(1) {
+        text-align: center;
+        margin-top: 10px;
+        padding-right: 0;
+    }
+
+    .about .box-about .box:nth-child(1) h1 {
+        font-size: 30px;
+    }
+
+    .about .box-about .box:nth-child(1) p {
+        font-size: 15px;
+        padding: 0px 40px 0px 40px;
+    }
+
+    .about .box-about .box:nth-child(2) img {
+        border-radius: 10px;
+    }
+
+    .famous {
+        width: 100%;
+        padding-top: 300px;
+        padding-bottom: 340px;
+    }
+
+    .famous .box-famous {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .famous .box-famous .box {
+        margin-bottom: 20px;
+    }
+
+    .famous .box-famous .box img {
+        width: 280px;
+        height: 210px;
+        border-radius: 10px;
+    }
+
+    .gallery {
+        height: 100%;
+        padding: 40px 0 60px 0;
+    }
+
+    .gallery .box-gallery img {
+        width: 320px;
+        height: 280px;
+        object-fit: cover;
+        margin: 20px;
+    }
+
+    .kotak-tombol {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+    }
+
+    .tombol {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 1);
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 768px
+=========================== */
+@media screen and (max-width: 768px) {
+    header .hero h1 {
+        font-size: 25px;
+    }
+
+    .contact {
+        height: 100%;
+        padding: 0 0 130px 0;
+    }
+
+    .contact .box-contact {
+        flex-direction: column;
+    }
+
+    .contact .box-contact h1 {
+        margin-bottom: 40px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 575px
+=========================== */
+@media screen and (max-width: 575px) {
+    .about .box-about .box:nth-child(2) img {
+        width: 280px;
+    }
+
+    .famous .box-famous .box img {
+        width: 280px;
+        height: 210px;
+    }
+
+    .famous .box-famous .box h1 {
+        font-size: 18px;
+    }
+
+    .famous .box-famous .box p {
+        font-size: 15px;
+    }
+
+    .contact .box-contact form table tr td input {
+        padding: 15px 90.7px 15px 20px;
+    }
+
+    .contact .box-contact form table tr td textarea {
+        padding: 15px 150px 150px 20px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 575px landscape
+=========================== */
+@media screen and (max-width: 575px) and (max-height: 400px) {
+    header .hero h1 {
+        line-height: 1.5;
+    }
+
+    .about {
+        padding-top: 140px;
+        padding-bottom: 150px;
+    }
+
+    .about .box-about .box {
+        margin-bottom: -20px;
+    }
+
+    .about .box-about .box:nth-child(1) p {
+        line-height: 1.5;
+    }
+
+    .famous {
+        padding-top: 450px;
+        padding-bottom: 460px;
+    }
+
+    .gallery {
+        height: 100%;
+        padding: 20px 0 40px 0;
+    }
+
+    .gallery .box-gallery img {
+        margin: 10px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 475px
+=========================== */
+@media screen and (max-width: 475px) {
+    header .hero h1 {
+        font-size: 21px;
+    }
+
+    .about .box-about .box:nth-child(2) img {
+        width: 280px;
+    }
+
+    .about .box-about .box:nth-child(1) h1 {
+        font-size: 20px;
+    }
+
+    .about .box-about .box:nth-child(1) p {
+        font-size: 15px;
+        padding: 0px 40px 0px 40px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — 428px (iPhone area)
+=========================== */
+@media screen and (max-width: 428px) and (max-height: 844px) {
+    .about .box-about .box:nth-child(2) img {
+        width: 200px;
+    }
+
+    .famous {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .famous .box-famous .box img {
+        width: 240px;
+        height: 170px;
+    }
+
+    .gallery .box-gallery img {
+        width: 230px;
+        height: 220px;
+        object-fit: cover;
+        margin: 20px;
+    }
+
+    .contact .box-contact form table tr td input {
+        padding: 15px 44.7px 15px 20px;
+    }
+
+    .contact .box-contact form table tr td textarea {
+        padding: 15px 100px 100px 20px;
+    }
+}
