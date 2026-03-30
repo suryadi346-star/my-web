@@ -3,12 +3,13 @@
 Landing page statis yang menampilkan tokoh-tokoh inspiratif dunia. Dibangun dengan HTML, CSS, dan JavaScript murni. Di-deploy otomatis ke GitHub Pages via GitHub Actions.
 
 ## 🚀 Live Demo
+`https://suryadi346-star.github.io/my-web/`
 
-> Setelah deploy: `https://suryadi346-star.github.io/[nama-repo]/`
+[![Deploy static content to Pages](https://github.com/suryadi346-star/my-web/actions/workflows/static.yml/badge.svg)](https://github.com/suryadi346-star/my-web/actions/workflows/static.yml)
 
 ## 📁 Struktur Proyek
 
-```
+```txt
 landing-page/
 ├── index.html                  # Halaman utama
 ├── img/                        # Semua gambar (masukkan manual)
@@ -45,18 +46,6 @@ landing-page/
 
 ## 📦 Cara Upload ke GitHub
 
-```bash
-# 1. Clone atau init repo baru
-git init
-git remote add origin https://github.com/suryadi346-star/[nama-repo].git
-
-# 2. Tambahkan semua file
-git add .
-git commit -m "feat: initial landing page"
-git push -u origin main
-```
-
-> ⚠️ **Penting**: Masukkan folder `img/` berisi semua gambar sebelum push.
 
 ## ⚙️ Aktifkan GitHub Pages
 
